@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,20 +20,21 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Checker = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RecipientName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CityCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.City = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Address = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Phone = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Email = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PValue = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Extra = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Weight = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Extras = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -47,11 +48,9 @@ Partial Class Form1
         Me.KövetésToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListaBetöltéseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KIjelöltekHozzáadásaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListaÜrítéseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KijelöltekEltávolításaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListaÜrítéseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NévjegyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,19 +71,19 @@ Partial Class Form1
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Checker, Me.ID, Me.RecipientName, Me.CityCode, Me.City, Me.Phone, Me.Amount, Me.Price, Me.Extra, Me.Weight})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Checker, Me.ID, Me.RecipientName, Me.Address, Me.Phone, Me.Email, Me.PValue, Me.Amount, Me.Price, Me.Weight, Me.Extras})
         Me.DataGridView1.Location = New System.Drawing.Point(16, 31)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1291, 622)
         Me.DataGridView1.TabIndex = 6
         '
         'Checker
         '
+        Me.Checker.Frozen = True
         Me.Checker.HeaderText = ""
         Me.Checker.Name = "Checker"
         Me.Checker.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
@@ -92,68 +91,78 @@ Partial Class Form1
         '
         'ID
         '
+        Me.ID.Frozen = True
         Me.ID.HeaderText = "Csomagkód"
         Me.ID.Name = "ID"
         Me.ID.ReadOnly = True
+        Me.ID.Width = 120
         '
         'RecipientName
         '
+        Me.RecipientName.Frozen = True
         Me.RecipientName.HeaderText = "Név"
         Me.RecipientName.Name = "RecipientName"
         Me.RecipientName.ReadOnly = True
-        Me.RecipientName.Width = 140
+        Me.RecipientName.Width = 160
         '
-        'CityCode
+        'Address
         '
-        Me.CityCode.HeaderText = "Irányítószám"
-        Me.CityCode.Name = "CityCode"
-        Me.CityCode.ReadOnly = True
-        Me.CityCode.Width = 80
-        '
-        'City
-        '
-        Me.City.HeaderText = "Város"
-        Me.City.Name = "City"
-        Me.City.ReadOnly = True
-        Me.City.Width = 120
+        Me.Address.HeaderText = "Cím"
+        Me.Address.Name = "Address"
+        Me.Address.ReadOnly = True
+        Me.Address.Width = 220
         '
         'Phone
         '
         Me.Phone.HeaderText = "Telefonszám"
         Me.Phone.Name = "Phone"
         Me.Phone.ReadOnly = True
+        Me.Phone.Width = 115
+        '
+        'Email
+        '
+        Me.Email.HeaderText = "Email"
+        Me.Email.Name = "Email"
+        Me.Email.ReadOnly = True
+        Me.Email.Width = 170
+        '
+        'PValue
+        '
+        Me.PValue.HeaderText = "Érték"
+        Me.PValue.Name = "PValue"
+        Me.PValue.ReadOnly = True
+        Me.PValue.Width = 68
         '
         'Amount
         '
         Me.Amount.HeaderText = "Utánvét"
         Me.Amount.Name = "Amount"
         Me.Amount.ReadOnly = True
-        Me.Amount.Width = 70
+        Me.Amount.Width = 68
         '
         'Price
         '
         Me.Price.HeaderText = "Feladási ktg."
         Me.Price.Name = "Price"
         Me.Price.ReadOnly = True
-        Me.Price.Width = 70
-        '
-        'Extra
-        '
-        Me.Extra.HeaderText = "Különszolgáltatások"
-        Me.Extra.Name = "Extra"
-        Me.Extra.ReadOnly = True
-        Me.Extra.Width = 200
+        Me.Price.Width = 68
         '
         'Weight
         '
         Me.Weight.HeaderText = "Súly"
         Me.Weight.Name = "Weight"
         Me.Weight.ReadOnly = True
-        Me.Weight.Width = 50
+        Me.Weight.Width = 68
+        '
+        'Extras
+        '
+        Me.Extras.HeaderText = "Különszolgáltatások"
+        Me.Extras.Name = "Extras"
+        Me.Extras.ReadOnly = True
+        Me.Extras.Width = 175
         '
         'Button2
         '
-        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(131, 660)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
@@ -164,7 +173,6 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Enabled = False
         Me.Button3.Location = New System.Drawing.Point(304, 660)
         Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
@@ -235,7 +243,7 @@ Partial Class Form1
         '
         'KövetésToolStripMenuItem
         '
-        Me.KövetésToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListaBetöltéseToolStripMenuItem, Me.KIjelöltekHozzáadásaToolStripMenuItem, Me.ListaÜrítéseToolStripMenuItem, Me.KijelöltekEltávolításaToolStripMenuItem})
+        Me.KövetésToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListaBetöltéseToolStripMenuItem, Me.KIjelöltekHozzáadásaToolStripMenuItem, Me.KijelöltekEltávolításaToolStripMenuItem, Me.ListaÜrítéseToolStripMenuItem})
         Me.KövetésToolStripMenuItem.Name = "KövetésToolStripMenuItem"
         Me.KövetésToolStripMenuItem.Size = New System.Drawing.Size(108, 24)
         Me.KövetésToolStripMenuItem.Text = "Követési lista"
@@ -250,47 +258,25 @@ Partial Class Form1
         '
         Me.KIjelöltekHozzáadásaToolStripMenuItem.Name = "KIjelöltekHozzáadásaToolStripMenuItem"
         Me.KIjelöltekHozzáadásaToolStripMenuItem.Size = New System.Drawing.Size(228, 26)
-        Me.KIjelöltekHozzáadásaToolStripMenuItem.Text = "KIjelöltek hozzáadása"
-        '
-        'ListaÜrítéseToolStripMenuItem
-        '
-        Me.ListaÜrítéseToolStripMenuItem.Name = "ListaÜrítéseToolStripMenuItem"
-        Me.ListaÜrítéseToolStripMenuItem.Size = New System.Drawing.Size(228, 26)
-        Me.ListaÜrítéseToolStripMenuItem.Text = "Kijelöltek eltávolítása"
+        Me.KIjelöltekHozzáadásaToolStripMenuItem.Text = "Kijelöltek hozzáadása"
         '
         'KijelöltekEltávolításaToolStripMenuItem
         '
         Me.KijelöltekEltávolításaToolStripMenuItem.Name = "KijelöltekEltávolításaToolStripMenuItem"
         Me.KijelöltekEltávolításaToolStripMenuItem.Size = New System.Drawing.Size(228, 26)
-        Me.KijelöltekEltávolításaToolStripMenuItem.Text = "Lista ürítése"
+        Me.KijelöltekEltávolításaToolStripMenuItem.Text = "Kijelöltek eltávolítása"
+        '
+        'ListaÜrítéseToolStripMenuItem
+        '
+        Me.ListaÜrítéseToolStripMenuItem.Name = "ListaÜrítéseToolStripMenuItem"
+        Me.ListaÜrítéseToolStripMenuItem.Size = New System.Drawing.Size(228, 26)
+        Me.ListaÜrítéseToolStripMenuItem.Text = "Lista ürítése"
         '
         'NévjegyToolStripMenuItem
         '
         Me.NévjegyToolStripMenuItem.Name = "NévjegyToolStripMenuItem"
         Me.NévjegyToolStripMenuItem.Size = New System.Drawing.Size(75, 24)
         Me.NévjegyToolStripMenuItem.Text = "Névjegy"
-        '
-        'Button1
-        '
-        Me.Button1.Enabled = False
-        Me.Button1.Location = New System.Drawing.Point(1080, 660)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(227, 28)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Kijelöltek követésének leállítása"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Enabled = False
-        Me.Button4.Location = New System.Drawing.Point(921, 660)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(151, 28)
-        Me.Button4.TabIndex = 13
-        Me.Button4.Text = "Kijelöltek követése"
-        Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
         '
@@ -305,8 +291,9 @@ Partial Class Form1
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Enabled = False
-        Me.CheckBox1.Location = New System.Drawing.Point(29, 46)
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Location = New System.Drawing.Point(24, 46)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(18, 17)
@@ -320,8 +307,6 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1323, 697)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
@@ -351,23 +336,22 @@ Partial Class Form1
     Friend WithEvents KIjelöltekHozzáadásaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListaÜrítéseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NévjegyToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Checker As DataGridViewCheckBoxColumn
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents RecipientName As DataGridViewTextBoxColumn
-    Friend WithEvents CityCode As DataGridViewTextBoxColumn
-    Friend WithEvents City As DataGridViewTextBoxColumn
-    Friend WithEvents Phone As DataGridViewTextBoxColumn
-    Friend WithEvents Amount As DataGridViewTextBoxColumn
-    Friend WithEvents Price As DataGridViewTextBoxColumn
-    Friend WithEvents Extra As DataGridViewTextBoxColumn
-    Friend WithEvents Weight As DataGridViewTextBoxColumn
     Friend WithEvents AlapértelmezettToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ÜresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents KövetésiListaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UtolsóÁllapotToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents KijelöltekEltávolításaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Checker As DataGridViewCheckBoxColumn
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents RecipientName As DataGridViewTextBoxColumn
+    Friend WithEvents Address As DataGridViewTextBoxColumn
+    Friend WithEvents Phone As DataGridViewTextBoxColumn
+    Friend WithEvents Email As DataGridViewTextBoxColumn
+    Friend WithEvents PValue As DataGridViewTextBoxColumn
+    Friend WithEvents Amount As DataGridViewTextBoxColumn
+    Friend WithEvents Price As DataGridViewTextBoxColumn
+    Friend WithEvents Weight As DataGridViewTextBoxColumn
+    Friend WithEvents Extras As DataGridViewTextBoxColumn
 End Class
